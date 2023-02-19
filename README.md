@@ -8,7 +8,9 @@ This is a Flutter Tele Medicine App (UI Only)
 
 #### You are free to use and modify
 
-##### Original UI : [https://dribbble.com/shots/20688641-Telemedicine-Mobile-App]
+##### Original UI : [https://dribbble.com/shots/20688641-Telemedicine-Mobile-App] 
+01:     <a href="https://dribbble.com/shots/20688641-Telemedicine-Mobile-App" target="_blank">Opens in new tab</a>
+
 
 ##### Few Photos
 
