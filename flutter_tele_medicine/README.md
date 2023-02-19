@@ -1,16 +1,11 @@
-# flutter_tele_medicine
+# Flutter_Tele_Medicine_UI
 
-A new Flutter project.
+This is a Flutter Tele Medicine App (UI Only)
 
-## Getting Started
+## Build with Flutter 3.7.3 Stable
 
-This project is a starting point for a Flutter application.
+### i Made this Ui as an exercise Nothing More
 
-A few resources to get you started if this is your first Flutter project:
+#### You are free to use and modify
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##### Original UI : [https://dribbble.com/shots/20688641-Telemedicine-Mobile-App]
