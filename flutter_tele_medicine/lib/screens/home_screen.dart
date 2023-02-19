@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   /* list with doctors info
-    doctor images are from umsplash
+    doctor images are from unsplash
     i left the images name with their original owners
     i made up their own field
   */
