@@ -51,6 +51,31 @@ class _HomeScreenState extends State<HomeScreen> {
     },
   ];
 
+  final List<IconData> bottomNavIcons = [
+    Icons.home,
+    Icons.view_list_outlined,
+    Icons.message_outlined,
+    Icons.settings,
+  ];
+  final List<Map<String, dynamic>> categoriesData = [
+    {
+      'name': 'Doctor',
+      'icon': Icons.person,
+    },
+    {
+      'name': 'Hospital',
+      'icon': Icons.apartment,
+    },
+    {
+      'name': 'Consultant',
+      'icon': Icons.monitor_heart,
+    },
+    {
+      'name': 'Recipe',
+      'icon': Icons.receipt,
+    },
+  ];
+
   int navBarIndex = 0;
 
   @override
@@ -88,18 +113,12 @@ class _HomeScreenState extends State<HomeScreen> {
               const MainImageWidget(),
               //App Categories
               Row(
-                children: const [
-                  CategoryCard(
-                      categoryName: 'Doctor', categoryIcon: Icons.person),
-                  CategoryCard(
-                      categoryName: 'Hospital',
-                      categoryIcon: Icons.apartment),
-                  CategoryCard(
-                      categoryName: 'Consultant',
-                      categoryIcon: Icons.monitor_heart),
-                  CategoryCard(
-                      categoryName: 'Recipe', categoryIcon: Icons.receipt),
-                ],
+                children: categoriesData
+                    .map((category) => CategoryCard(
+                          categoryName: category['name'],
+                          categoryIcon: category['icon'],
+                        ))
+                    .toList(),
               ),
               //The Text : [Top Doctors, See All]
               Padding(
@@ -146,12 +165,8 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        items: [
-          bottomNavItem(icon: Icons.home),
-          bottomNavItem(icon: Icons.view_list_outlined),
-          bottomNavItem(icon: Icons.message_outlined),
-          bottomNavItem(icon: Icons.settings),
-        ],
+        // function to iterate the list with icons
+        items: bottomNavIcons.map((icon) => bottomNavItem(icon: icon)).toList(),
         onTap: (index) {
           setState(() {
             navBarIndex = index;

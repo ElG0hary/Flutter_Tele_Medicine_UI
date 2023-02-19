@@ -13,7 +13,6 @@ class DoctorCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 32 is the margin (left 16 + right 16)
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Card(
