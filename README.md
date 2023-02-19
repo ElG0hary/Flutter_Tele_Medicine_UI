@@ -4,11 +4,11 @@ This is a Flutter Tele Medicine App (UI Only)
 
 ## Build with Flutter 3.7.3 Stable
 
-### i Made this Ui as an exercise Nothing More
+### i Made this Ui as an exercise Nothing More, since i don't have the original icons and fonts , i just kept on guessing ###Dimesnions
 
 #### You are free to use and modify
 
-##### Original UI : <a href="https://dribbble.com/shots/20688641-Telemedicine-Mobile-App" target="_blank">Opens in new tab</a>
+##### Original UI : <a href="https://dribbble.com/shots/20688641-Telemedicine-Mobile-App" target="_blank">See Original UI</a>
 
 
 ##### Few Photos
