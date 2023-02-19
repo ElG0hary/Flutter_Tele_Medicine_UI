@@ -1,8 +1,8 @@
 import 'package:flutter/Material.dart';
-import 'package:flutter_tele_medicine/widgets/appbar.dart';
-import 'package:flutter_tele_medicine/widgets/bottom_nav_bar_item.dart';
+import 'package:flutter_tele_medicine/widgets/components/appbar.dart';
+import 'package:flutter_tele_medicine/widgets/components/bottom_nav_bar_item.dart';
 import 'package:flutter_tele_medicine/widgets/category_card.dart';
-import 'package:flutter_tele_medicine/widgets/doctor_card.dart';
+import 'package:flutter_tele_medicine/widgets/components/doctor_card.dart';
 import 'package:flutter_tele_medicine/widgets/main_image_widget.dart';
 
 class HomeScreen extends StatefulWidget {
