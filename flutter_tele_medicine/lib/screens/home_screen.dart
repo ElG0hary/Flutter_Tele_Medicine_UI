@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   /* list with doctors info
-    doctor images are from umsplash
+    doctor images are from unsplash
     i left the images name with their original owners
     i made up their own field
   */
@@ -87,22 +87,19 @@ class _HomeScreenState extends State<HomeScreen> {
               //The Image
               const MainImageWidget(),
               //App Categories
-              SizedBox(
-                width: double.infinity,
-                child: Row(
-                  children: const [
-                    CategoryCard(
-                        categoryName: 'Doctor', categoryIcon: Icons.person),
-                    CategoryCard(
-                        categoryName: 'Hospital',
-                        categoryIcon: Icons.apartment),
-                    CategoryCard(
-                        categoryName: 'Consultant',
-                        categoryIcon: Icons.monitor_heart),
-                    CategoryCard(
-                        categoryName: 'Recipe', categoryIcon: Icons.receipt),
-                  ],
-                ),
+              Row(
+                children: const [
+                  CategoryCard(
+                      categoryName: 'Doctor', categoryIcon: Icons.person),
+                  CategoryCard(
+                      categoryName: 'Hospital',
+                      categoryIcon: Icons.apartment),
+                  CategoryCard(
+                      categoryName: 'Consultant',
+                      categoryIcon: Icons.monitor_heart),
+                  CategoryCard(
+                      categoryName: 'Recipe', categoryIcon: Icons.receipt),
+                ],
               ),
               //The Text : [Top Doctors, See All]
               Padding(

@@ -14,7 +14,6 @@ class DoctorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 32 is the margin (left 16 + right 16)
-    final double phoneWidth = MediaQuery.of(context).size.width - 32;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Card(
@@ -27,6 +26,7 @@ class DoctorCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              // Doctor Profile Image
               SizedBox(
                 width: 60,
                 height: 55,
@@ -39,8 +39,7 @@ class DoctorCard extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               //fail safe for doctor name incase it got Too Long
-              SizedBox(
-                width: phoneWidth * .6,
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

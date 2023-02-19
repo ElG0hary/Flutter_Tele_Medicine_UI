@@ -8,33 +8,35 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Container(
-        margin: const EdgeInsets.all(16),
-        width: (MediaQuery.of(context).size.width) * .15,
-        height: 60,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Icon(
-              categoryIcon,
-              size: 32,
-              color: const Color(0xff2c41ff),
-            ),
-            FittedBox(
-              fit: BoxFit.fitWidth,
-              child: Text(
-                categoryName,
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: 14,
+    return Expanded(
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        //category Icon and category name.
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Icon(
+                categoryIcon,
+                size: 32,
+                color: const Color(0xff2c41ff),
+              ),
+              // fail safe for category name incase it got too long
+              FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Text(
+                  categoryName,
+                  style: const TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
