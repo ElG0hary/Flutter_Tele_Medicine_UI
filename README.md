@@ -4,7 +4,7 @@ This is a Flutter Tele Medicine App (UI Only)
 
 ## Build with Flutter 3.7.3 Stable
 
-### i Made this Ui as an exercise Nothing More, since i don't have the original icons and fonts , i just kept on guessing ###Dimesnions
+#### i Made this Ui as an exercise Nothing More, since i don't have the original icons and fonts , i just kept on guessing Dimesnions
 
 #### You are free to use and modify
 
