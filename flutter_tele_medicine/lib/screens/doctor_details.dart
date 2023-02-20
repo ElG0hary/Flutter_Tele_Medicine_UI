@@ -1,11 +1,12 @@
 import 'package:flutter/Material.dart';
-import 'package:flutter_tele_medicine/widgets/components/doctor_profile_details.dart';
+import 'package:flutter_tele_medicine/widgets/components/doctor_details_bar.dart';
 import 'package:flutter_tele_medicine/widgets/components/doctor_profile_stack.dart';
+import 'package:flutter_tele_medicine/widgets/components/paragraph_title_text.dart';
+import 'package:flutter_tele_medicine/widgets/day_widget.dart';
 import 'package:flutter_tele_medicine/widgets/description_text_widget.dart';
-import '../widgets/my_vertical_divider.dart';
 
 class DoctorDetails extends StatelessWidget {
-  const DoctorDetails(
+  DoctorDetails(
       {super.key,
       required this.doctorImage,
       required this.doctorName,
@@ -14,6 +15,44 @@ class DoctorDetails extends StatelessWidget {
   final String doctorName;
   final String doctorImage;
   final String doctorField;
+  final List<Map<String, String>> days = [
+    {
+      'num': '1',
+      'day': 'Sat',
+      'time': '9:00 am',
+    },
+    {
+      'num': '2',
+      'day': 'Sun',
+      'time': '10:00 am',
+    },
+    {
+      'num': '3',
+      'day': 'Mon',
+      'time': '11:00 am',
+    },
+    {
+      'num': '4',
+      'day': 'Tue',
+      'time': '12:00 pm',
+    },
+    {
+      'num': '5',
+      'day': 'Wed',
+      'time': '5:00 pm',
+    },
+    {
+      'num': '6',
+      'day': 'Thu',
+      'time': '6:00 pm',
+    },
+    {
+      'num': '7',
+      'day': 'Fri',
+      'time': '7:00 pm',
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     Size mediaQuery = MediaQuery.of(context).size;
@@ -61,53 +100,65 @@ class DoctorDetails extends StatelessWidget {
                 doctorField: doctorField,
                 mediaQuery: mediaQuery,
               ),
-              Container(
-                width: double.infinity,
-                height: 100,
-                margin: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(28),
-                  color: const Color(0xfffaf9ff),
-                ),
-                //Experience and profile Views
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    DoctorProfileDetails(
-                      number: '127',
-                      text: 'Reviews',
-                    ),
-                    myVerticalDivider(),
-                    DoctorProfileDetails(
-                      number: '709',
-                      text: 'Patients',
-                    ),
-                    myVerticalDivider(),
-                    DoctorProfileDetails(
-                      number: '11',
-                      text: 'Years exp.',
-                    ),
-                  ],
-                ),
-              ),
+              const DoctorDetailsBar(),
               //Demography Word
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Demography',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
+              const ParagraphTitleText(title: 'Demography'),
+              //Lorem and Show more.
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: DescriptionTextWidget(
                     text:
                         'Lorem ipsum dolor sit amet, consec tetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
               ),
-              
+              const ParagraphTitleText(title: 'Schedules'),
+              const SizedBox(height: 8),
+              //Book a visit day
+              SizedBox(
+                height: 100,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: days.length,
+                  itemBuilder: (ctx, index) {
+                    return DoctorDayWidget(
+                      day: days[index]['day']!,
+                      dayNum: days[index]['num']!,
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 8),
+              const ParagraphTitleText(title: 'Choose time'),
+              const SizedBox(height: 8),
+              SizedBox(
+                height: 50,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: days.length,
+                  itemBuilder: (ctx, index) {
+                    return DoctorDayWidget(
+                      dayNum: days[index]['time']!,
+                    );
+                  },
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 100,
+                padding: const EdgeInsets.all(16),
+                child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff2c41ff),
+                      shape: const StadiumBorder(),
+                    ),
+                    child: const Text(
+                      'Book Now!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
+                    )),
+              ),
             ],
           ),
         ),

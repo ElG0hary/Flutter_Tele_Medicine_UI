@@ -18,7 +18,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
               color: Color(0xff878788),
             ),
           ),
-          SizedBox(height: 8),
+          SizedBox(height: 4),
           Text(
             'Keep Healthy',
             style: TextStyle(

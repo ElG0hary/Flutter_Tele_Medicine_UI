@@ -89,12 +89,9 @@ class _HomeScreenState extends State<HomeScreen> {
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: <Widget>[
-              const SizedBox(
-                height: 16,
-              ),
               //Search Field
               Padding(
-                padding: const EdgeInsets.only(left: 16.0, right: 16),
+                padding: const EdgeInsets.only(left: 16.0, right: 16, top: 16),
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -146,6 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
               //Doctors List
               Expanded(
                 child: ListView.builder(
+                  primary: false,
                   itemBuilder: ((context, index) => DoctorCard(
                         doctorImage: doctors[index]['image']!,
                         doctorName: doctors[index]['name']!,

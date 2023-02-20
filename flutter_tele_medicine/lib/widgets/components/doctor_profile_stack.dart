@@ -3,7 +3,13 @@ import 'package:flutter/Material.dart';
 import '../doctor_details_widgets.dart';
 
 class DoctorProfileStack extends StatelessWidget {
-  const DoctorProfileStack({super.key, required this.doctorImage, required this.doctorName, required this.doctorField, required this.mediaQuery});
+  const DoctorProfileStack({
+    super.key,
+    required this.doctorImage,
+    required this.doctorName,
+    required this.doctorField,
+    required this.mediaQuery,
+  });
 
   final String doctorImage;
   final String doctorName;
@@ -32,26 +38,26 @@ class DoctorProfileStack extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: Row(
               mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   '127 Reviews',
                   style: TextStyle(
                     color: Color(0xff848484),
                   ),
                 ),
-                const SizedBox(width: 8),
-                const Icon(
+                SizedBox(width: 8),
+                Icon(
                   Icons.copyright,
                   color: Color.fromARGB(255, 80, 80, 80),
                   size: 8,
                 ),
-                const SizedBox(width: 8),
-                const Text(
+                SizedBox(width: 8),
+                Text(
                   '4.8',
                 ),
                 Icon(
                   Icons.star,
-                  color: Colors.yellow[700],
+                  color: Color(0xFFFBC02D),
                 ),
               ],
             ),
